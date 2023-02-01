@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: auto;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(111.54deg, #141622 20.58%, #07080A 80.96%);
+    display: grid;
+    grid-template-rows: 90px 1fr;
+    color: white;
+}
+.header1{
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto auto 133px;
+    column-gap: 64px;
+}
+.logo{
+    margin-top: auto;
+    padding-left: 135px;
+}
+.menu-item{
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 163.5%;
+    letter-spacing: -0.045em;
+    color: rgba(255, 255, 255, 0.7);
+    margin: auto;
+}
+.content1{
+    display: grid;
+    grid-template-columns: 166px 350px 267px 271px;
+    column-gap: 62px;
+}
+.consoles{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.choice{
+    display: grid;
+    grid-template-rows: 1fr 247px 126px 48px 1fr;
+    row-gap: 40px;
+}
+.making{
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 88px;
+    /* or 92% */
+    letter-spacing: -0.045em;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 7px;
+    grid-template-rows: auto auto;
+}
+.catalog{
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 165%;
+    letter-spacing: -0.045em;
+    color: rgba(255, 255, 255, 0.7);
+}
