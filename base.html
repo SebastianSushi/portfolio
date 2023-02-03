@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <title>PS Store</title>
     <link href="page.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
+    <script>
+        $(document).ready(function(){
+            $("#fstCons").mouseenter(()=>{
+                $("#second").toggleClass("second-shadow");
+                $("#blur").toggleClass("blur-active");
+                $("#blur2").toggleClass("no-blur");
+            });
+            $("#fstCons").mouseout(()=>{
+                $("#second").toggleClass("second-shadow");
+                $("#blur").toggleClass("blur-active");
+                $("#blur2").toggleClass("no-blur");
+            });
+            $("#scndCons").mouseenter(()=>{
+                $("#first").toggleClass ("first-shadow");
+                $("#blur2").toggleClass("blur-active");
+                $("#blur").toggleClass("no-blur");
+            });
+            $("#scndCons").mouseout(()=>{
+                $("#first").toggleClass ("first-shadow");
+                $("#blur2").toggleClass("blur-active");
+                $("#blur").toggleClass("no-blur");
+            });
+        });
+    </script>
     <div class="header1">
-        <span class="logo"><img src="ps-bug.svg"></span>
+        <span></span>
+        <span class="logo"></span>
         <span class="menu-item">Sony</span>
         <span class="menu-item">Games</span>
         <span class="menu-item">Consoles</span>
@@ -21,16 +47,24 @@
             <div></div>
             <div class="making">Make your choice</div>
             <div class="buttons">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
+                <button id="fstCons" class="choose-button">Classic</button>
+                <input id="scndCons" class="choose-button" type="button" value="Digital Edition"></input>
+                <span>ver.1</span>
+                <span>ver.2</span>
             </div>
             <div class="catalog">Play a back catalog of PS4™<br>games on your PS5 console</div>
             <div></div>
         </span>
-        <span class="consoles" style="background-image: url('pngtree-a-vector-illustration-playstation-5-on-white-background-png-image_8750208 2.png');"></span>
-        <span class="consoles" style="background-image: url('playstation-5-with-dualsense-front-product-shot-01-ps5-en-30jul20 2.png');"></span>
+        <span id="first" class="consoles">
+            <div class="prices">399$</div>
+            <div id="blur" class="elipse-blur"></div>
+            <img src="console2.png" height="650px">
+        </span>
+        <span id="second" class="consoles">
+            <div class="prices">499$</div>
+            <div id="blur2" class="elipse-blur"></div>
+            <img src="console1.png" height="650px">
+        </span>
     </div>
 </body>
 </htmml>

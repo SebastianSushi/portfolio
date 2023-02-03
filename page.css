@@ -1,5 +1,10 @@
 *{
     box-sizing: border-box;
+    transition: 0.5s;
+}
+@font-face {
+    font-family: 'Muller';
+    src: url('ofont.ru_Muller.ttf');
 }
 body{
     height: auto;
@@ -10,12 +15,14 @@ body{
 }
 .header1{
     display: grid;
-    grid-template-columns: 1fr auto auto auto auto auto 133px;
+    grid-template-columns: 71px 1fr auto auto auto auto auto 133px;
     column-gap: 64px;
 }
 .logo{
-    margin-top: auto;
-    padding-left: 135px;
+    background-image: url(ps-bug.svg);
+    /* padding-left: 135px; */
+    background-repeat: no-repeat;
+    background-position: left;
 }
 .menu-item{
     font-family: 'Muller';
@@ -23,7 +30,7 @@ body{
     font-weight: 300;
     font-size: 16px;
     line-height: 163.5%;
-    letter-spacing: -0.045em;
+    letter-spacing: 2px;
     color: rgba(255, 255, 255, 0.7);
     margin: auto;
 }
@@ -33,12 +40,46 @@ body{
     column-gap: 62px;
 }
 .consoles{
+    position: relative;
+    z-index: 1;
     background-repeat: no-repeat;
     background-position: center;
+    height: 650px;
+    animation-fill-mode: both;
+}
+.prices{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 40%;
+    right: 0;
+    z-index: 2;
+    width: 90px;
+    height: 90px;
+    border-radius: 90%;
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    background: linear-gradient(95.63deg, #1D47DE 22.44%, rgba(52, 138, 217, 0.99) 105.5%);
+}
+.elipse-blur{
+    position: absolute;
+    left: 25%;
+    z-index: -1;
+    width: 100px;
+    height: 250px;
+    border-radius: 70px;
+    background: rgba(0, 90, 253, 0.3);
+    filter: blur(50px);
 }
 .choice{
     display: grid;
-    grid-template-rows: 1fr 247px 126px 48px 1fr;
+    grid-template-rows: 1fr 247px 119px 48px 1fr;
     row-gap: 40px;
 }
 .making{
@@ -48,13 +89,33 @@ body{
     font-size: 96px;
     line-height: 88px;
     /* or 92% */
-    letter-spacing: -0.045em;
+    letter-spacing: 2px;
 }
 .buttons{
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 164%;
+    letter-spacing: -0.045em;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 133px 1fr;
     column-gap: 7px;
-    grid-template-rows: auto auto;
+    grid-template-rows: 63px 40px;
+    row-gap: 16px;
+}
+.choose-button{
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    background: #3D3F48;
+    border-radius: 38.5px;
 }
 .catalog{
     font-family: 'Muller';
@@ -62,6 +123,56 @@ body{
     font-weight: 400;
     font-size: 18px;
     line-height: 165%;
-    letter-spacing: -0.045em;
+    letter-spacing: 2px;
     color: rgba(255, 255, 255, 0.7);
+}
+.blur-active{
+    position: absolute;
+    left: 27%;
+    z-index: -1;
+    width: 100px;
+    height: 250px;
+    border-radius: 70px;
+    background: #005AFD;
+    filter: blur(50px);
+}
+.first-shadow{
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 650px;
+    animation: brightCons 0.5s;
+    animation-fill-mode: both;
+}
+.second-shadow{
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 650px;
+    animation: brightCons 0.5s;
+    animation-fill-mode: both;
+}
+.no-blur{
+    animation: blurHide 0.5s;
+    animation-fill-mode: both;
+}
+#fstCons:hover{
+    transition: 0.5s;
+    transform: translate(0px, -10px);
+    background: linear-gradient(95.63deg, #1D47DE 22.44%, rgba(52, 138, 217, 0.99) 105.5%);
+}
+#scndCons:hover{
+    transition: 0.5s;
+    transform: translate(0px, -10px);
+    background: linear-gradient(95.63deg, #1D47DE 22.44%, rgba(52, 138, 217, 0.99) 105.5%);
+}
+@keyframes brightCons{
+    from{filter: brightness(1);}
+    to {filter: brightness(0.5);}
+}
+@keyframes blurHide{
+    from{opacity: 1;}
+    to {opacity: 0;}
 }
