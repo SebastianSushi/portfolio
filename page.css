@@ -116,6 +116,7 @@ body{
     color: #FFFFFF;
     background: #3D3F48;
     border-radius: 38.5px;
+    border: 0px black solid;
 }
 .catalog{
     font-family: 'Muller';
