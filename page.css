@@ -143,7 +143,8 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     height: 650px;
-    animation: brightCons 0.5s;
+    filter: brightness(0.5);
+    transition: 0.5s;
     animation-fill-mode: both;
 }
 .second-shadow{
@@ -152,7 +153,8 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     height: 650px;
-    animation: brightCons 0.5s;
+    filter: brightness(0.5);
+    transition: 0.5s;
     animation-fill-mode: both;
 }
 .no-blur{
@@ -168,10 +170,6 @@ body{
     transition: 0.5s;
     transform: translate(0px, -10px);
     background: linear-gradient(95.63deg, #1D47DE 22.44%, rgba(52, 138, 217, 0.99) 105.5%);
-}
-@keyframes brightCons{
-    from{filter: brightness(1);}
-    to {filter: brightness(0.5);}
 }
 @keyframes blurHide{
     from{opacity: 1;}
