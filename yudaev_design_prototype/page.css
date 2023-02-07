@@ -20,7 +20,6 @@ body{
 }
 .logo{
     background-image: url(ps-bug.svg);
-    /* padding-left: 135px; */
     background-repeat: no-repeat;
     background-position: left;
 }
@@ -88,7 +87,6 @@ body{
     font-weight: 800;
     font-size: 96px;
     line-height: 88px;
-    /* or 92% */
     letter-spacing: 2px;
 }
 .buttons{

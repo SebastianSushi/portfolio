@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        $(document).ready(function(){
+        $(document).ready(()=>{
             $("#fstCons").mouseenter(()=>{
                 $("#second").toggleClass("second-shadow");
                 $("#blur").toggleClass("blur-active");
@@ -47,7 +47,7 @@
             <div></div>
             <div class="making">Make your choice</div>
             <div class="buttons">
-                <button id="fstCons" class="choose-button">Classic</button>
+                <input id="fstCons" class="choose-button">Classic</input>
                 <input id="scndCons" class="choose-button" type="button" value="Digital Edition"></input>
                 <span>ver.1</span>
                 <span>ver.2</span>
